@@ -35,6 +35,10 @@ def get_days_in_month(month: int, year: int) -> int:
     return standard_days_in_month[month]
 
 
+def days_between(date_1: Date, date_2: Date) -> int:
+    return 0
+
+
 class Date:
 
     def __init__(self, year: int, month: int, day: int) -> None:
@@ -67,15 +71,15 @@ class Date:
 
         return self.day == other.day and self.month == other.month and self.year == other.year
 
-    def __le__(self, other) -> bool:
+    def __lt__(self, other) -> bool:
 
         if self.year != other.year:
-            return self.year <= other.year
+            return self.year < other.year
 
         if self.month != other.month:
-            return self.month <= other.month
+            return self.month < other.month
 
-        return self.day <= other.day
+        return self.day < other.day
 
     def __repr__(self):
         return f"{self.day}/{self.month}/{self.year}"

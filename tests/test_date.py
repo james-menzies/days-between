@@ -38,3 +38,22 @@ class TestDate(unittest.TestCase):
         self.assertIsNotNone(date)
         date = Date.get_valid_date(1989, 2, 29)
         self.assertIsNone(date)
+
+    def test_equality(self):
+
+        date_1 = Date.get_valid_date(2000, 1, 1)
+        date_2 = Date.get_valid_date(2000, 1, 1)
+        self.assertEqual(date_1, date_2)
+        date_2 = Date.get_valid_date(2000, 2, 1)
+        self.assertNotEqual(date_1, date_2)
+
+    def test_comparison(self):
+
+        date_1 = Date.get_valid_date(1989, 1, 3)
+        date_2 = Date.get_valid_date(1983, 8, 3)
+
+        self.assertLess(date_2, date_1)
+        self.assertNotEqual(date_2, date_1)
+        self.assertGreater(date_1, date_2)
+
+
