@@ -13,6 +13,11 @@ instructions = \
 
 
 def parse_date(input_str: str) -> Optional[Date]:
+    """
+    Attempts to parse an input string into a Date object.
+    :param input_str: An input string in the format DD/MM/YYYY
+    :return: A Date object, or None if input is invalid
+    """
     try:
         tokens: List[int] = [int(token) for token in input_str.split('/')]
     except ValueError:
@@ -27,6 +32,12 @@ def parse_date(input_str: str) -> Optional[Date]:
 
 
 def prompt_for_date(date_name: str) -> Date:
+    """
+    Continuously prompts the user for a date string until a valid
+    input is accepted.
+    :param date_name: The name of the date to inject into the user prompt.
+    :return: The fully-parsed Date object
+    """
     date: Optional[Date] = None
     while not date:
 
