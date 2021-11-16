@@ -58,7 +58,7 @@ class Date:
         if day < 1 or day > get_days_in_month(month, year):
             return None
 
-        return Date(year, month, int)
+        return Date(year, month, day)
 
     def __eq__(self, other) -> bool:
 
@@ -77,3 +77,5 @@ class Date:
 
         return self.day <= other.day
 
+    def __repr__(self):
+        return f"{self.day}/{self.month}/{self.year}"
