@@ -18,10 +18,10 @@ def parse_date(input_str: str) -> Optional[Date]:
     except ValueError:
         return
 
-    day, month, year, *args = tokens
-
-    if len(args) > 0:
+    if len(tokens) != 3:
         return
+
+    day, month, year = tokens
 
     return Date.get_valid_date(year, month, day)
 
@@ -38,12 +38,13 @@ def prompt_for_date(date_name: str) -> Date:
     return date
 
 
-print(welcome)
-print(instructions)
+if __name__ == '__main__':
+    print(welcome)
+    print(instructions)
 
-date_1 = prompt_for_date("Date #1")
-date_2 = prompt_for_date("Date #2")
+    date_1 = prompt_for_date("Date #1")
+    date_2 = prompt_for_date("Date #2")
 
-result = days_between(date_1, date_2)
+    result = days_between(date_1, date_2)
 
-print(f"Days between dates {date_1} and {date_2}: {result}")
+    print(f"Days between dates {date_1} and {date_2}: {result}")
