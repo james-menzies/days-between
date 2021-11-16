@@ -1,7 +1,7 @@
 import unittest
 
 from src.dates import Date
-from src.main import parse_date
+from src.display import parse_date
 
 
 class TestDateParser(unittest.TestCase):
