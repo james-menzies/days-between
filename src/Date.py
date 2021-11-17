@@ -3,7 +3,6 @@ from __future__ import annotations
 from typing import Optional
 
 
-
 class Date:
     STANDARD_DAYS_IN_MONTH = {
         1: 31,
@@ -27,6 +26,9 @@ class Date:
 
     @staticmethod
     def is_leap_year(year: int) -> bool:
+        """
+        Determine whether the provided year is a leap year.
+        """
         if year % 4 > 0:
             return False
 
@@ -37,6 +39,13 @@ class Date:
 
     @classmethod
     def get_days_in_month(cls, month: int, year: int) -> int:
+        """
+        From a given month and year, determine how many days are in
+        that month.
+        :param month:
+        :param year:
+        :return: The number of days.
+        """
         if cls.is_leap_year(year) and month == 2:
             return 29
 

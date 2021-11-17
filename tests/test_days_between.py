@@ -24,6 +24,6 @@ class TestDaysBetween(unittest.TestCase):
     def test_case_6(self):
         self.run_sample(Date(1985, 6, 6), Date(1986, 11, 12), 523)
 
-    def run_sample(self, date_1: Date, date_2: Date, result: int):
+    def run_sample(self, date_1: Date, date_2: Date, result: int) -> None:
         actual: int = days_between(date_1, date_2)
         self.assertEqual(result, actual)

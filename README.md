@@ -13,6 +13,12 @@ A key consideration when making these calculations are leap years. This will add
 * The year must be divisible by 4. *e.g. 1988*
 * If the year is also divisible by 100, it must then be divisible by 400. For example, 2000 is a leap year and 1900 is not.
 
+## How to Run
+
+This program requires Python 3.6+ to run. Simply clone the repository, navigate to the source directory and run `python days_between.py` (`python3 days_between.py` on some platforms). No external dependencies are required.
+
+To run the test suite run `python[3] -m unittest discover tests`.
+
 ## Components
 
 ### User Flow
@@ -61,7 +67,11 @@ The following test cases are used to ensure accuracy:
 
 1) 2/6/1983 to 22/6/1983 = 19 days 
 2) 4/7/1984 to 25/12/1984 = 173 days
-3) 3/1/1989 to 3/8/1983 = 2036 days
+3) 1/3/1989 to 3/8/1983 = 2036 days
+4) 17/4/2158 to 12/9/2392 = 85614 days
+5) 12/1/2000 to 10/2/2000 = 28 days
+6) 6/6/1985 to 12/11/1986 = 523 days
+
 
 ### Dates Module
 
