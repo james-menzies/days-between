@@ -1,6 +1,6 @@
 from typing import Optional, List
 
-from src.dates import Date, days_between
+from src.days_between import days_between, Date
 
 welcome = "Days-Between Calculator"
 
@@ -49,7 +49,7 @@ def prompt_for_date(date_name: str) -> Date:
     return date
 
 
-if __name__ == '__main__':
+def run():
     print(welcome)
     print(instructions)
 

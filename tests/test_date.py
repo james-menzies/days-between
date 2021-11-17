@@ -1,6 +1,6 @@
 import unittest
 
-from src.dates import Date
+from src.Date import Date
 
 
 class TestDate(unittest.TestCase):

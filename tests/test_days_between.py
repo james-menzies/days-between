@@ -1,6 +1,7 @@
 import unittest
 
-from src.dates import Date, days_between
+from src.Date import Date
+from src.days_between import days_between
 
 
 class TestDaysBetween(unittest.TestCase):

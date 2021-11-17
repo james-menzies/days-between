@@ -1,6 +1,6 @@
 import unittest
 
-from src.dates import Date
+from src.Date import Date
 from src.display import parse_date
 
 
